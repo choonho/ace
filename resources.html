@@ -1016,9 +1016,13 @@
                                                     data-ajax="hostRequest">
 												<thead>
 													<tr>
-													<th>Zone</th>
+													    <th>Region</th>
+														<th>Zone</th>
 														<th>Cluster</th>
-                                                        <th>Name</th>
+                                                        <th>Hostname</th>
+                                                        <th>IPv4</th>
+														<th>Host ID</th>
+														<th>Domain</th>
 														<th>Status</th>
 														<th>
 															<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
@@ -1119,14 +1123,19 @@
                     "processing": true,
                     "serverSide": true,
                     "ajax": {
-                        "url": "http://192.168.122.99/resources/v1/regions",
+                        "url": "/resources/v1/hosts",
                         "type": 'GET'
                         },
                     "columns": [
+                        { "data": "region_name" },
+                        { "data": "zone_name" },
+                        { "data": "cluster_name" },
                         { "data": "name" },
+                        { "data": "ipv4" },
+                        { "data": "host_id" },
+                        { "data": "domain" },
                         { "data": "status" },
-                        { "data": "created" },
-                        { "data": "region_id" }
+                        { "data": "created" }
                     ],
 			
 					//,
